@@ -6,12 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".FragmentActivity">
+
     <Button
         android:id="@+id/indicator_button"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="1"
         android:text="Индикатор" />
+
     <Button
         android:id="@+id/counter_button"
         android:layout_width="match_parent"
@@ -40,6 +42,5 @@
         android:id="@+id/fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="0.5">
-    </FrameLayout>
+        android:layout_weight="0.5"></FrameLayout>
 </LinearLayout>

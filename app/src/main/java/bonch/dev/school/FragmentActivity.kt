@@ -1,14 +1,11 @@
 package bonch.dev.school
 
-import android.app.PendingIntent.getActivity
-import android.content.Intent
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import androidx.core.app.ComponentActivity.ExtraData
-import androidx.core.content.ContextCompat.getSystemService
-import android.icu.lang.UCharacter.GraphemeClusterBreak.T
+
 
 class FragmentActivity : AppCompatActivity() {
 
@@ -32,6 +29,7 @@ class FragmentActivity : AppCompatActivity() {
         if (savedInstanceState != null)
             reWrite(savedInstanceState)
     }
+
     private fun initialization() {
         indicatorButton = findViewById<Button>(R.id.indicator_button)
         counterButton = findViewById<Button>(R.id.counter_button)
@@ -41,6 +39,7 @@ class FragmentActivity : AppCompatActivity() {
         fragmentManager.beginTransaction().add(R.id.fragment, fragment)
             .commit()
     }
+
     private fun setOnClickListener() {
         indicatorButton.setOnClickListener {
             indicatorButton.isEnabled = false
@@ -68,6 +67,7 @@ class FragmentActivity : AppCompatActivity() {
         outState.putString("Text", textField.text.toString())
 //outState.putInt("Counts", currentCount)
     }
+
     fun reWrite(savedInstanceState: Bundle) {
         indBool = savedInstanceState.getBoolean("Indicator")
         if (indBool) indicatorButton.isEnabled = false

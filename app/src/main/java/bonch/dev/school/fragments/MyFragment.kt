@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 
-class MyFragment : Fragment(){
-    private lateinit var textView:TextView
+class MyFragment : Fragment() {
+    private lateinit var textView: TextView
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -20,7 +20,8 @@ class MyFragment : Fragment(){
 
         return view
     }
-    fun setTextView(){
+
+    fun setTextView() {
         var a = getArguments()!!.getString("argText", "");
         textView.setText(a)
     }
