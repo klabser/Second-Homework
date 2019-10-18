@@ -65,7 +65,6 @@ class FragmentActivity : AppCompatActivity() {
         outState.putBoolean("Indicator", indBool)
         outState.putInt("Counts", currentCount)
         outState.putString("Text", textField.text.toString())
-//outState.putInt("Counts", currentCount)
     }
 
     fun reWrite(savedInstanceState: Bundle) {
